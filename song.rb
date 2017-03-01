@@ -5,7 +5,7 @@ configure :development do
 end
 
 configure :production do
-  DataMapper.setup(:default, 'postgres://daisi:12345@hostname/database')
+  DataMapper.setup(:default, 'postgres://daisi:12345@herokuapp.com/database')
 end
 
 class Song
