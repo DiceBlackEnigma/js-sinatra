@@ -4,6 +4,10 @@ configure :development do
   DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.db")
 end
 
+configure :production do
+  DataMapper.setup(:default, 'postgres://daisi:12345@localhost/database')
+end
+
 class Song
   include DataMapper::Resource
   property :id, Serial
